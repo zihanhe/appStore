@@ -13,11 +13,24 @@ class BaseTabBarController: UITabBarController {
         super.viewDidLoad()
         
         viewControllers = [
-            createNavController(viewController: AppSearchController(), title: NSLocalizedString("SEARCH", comment: ""), imageName: "magnifyingglass", tag: 2),
-
-            createNavController(viewController: UIViewController(), title: NSLocalizedString("TODAY", comment: ""), imageName: "newspaper", tag: 0),
-            createNavController(viewController: UIViewController(), title: NSLocalizedString("APPS", comment: ""), imageName: "square.stack.3d.up.fill", tag: 1),
-
+            createNavController(
+                viewController: AppsController(),
+                title: NSLocalizedString("APPS", comment: ""),
+                imageName: "square.stack.3d.up.fill",
+                tag: 1
+            ),
+            createNavController(
+                viewController: UIViewController(),
+                title: NSLocalizedString("TODAY", comment: ""),
+                imageName: "newspaper",
+                tag: 0
+            ),
+            createNavController(
+                viewController: AppSearchController(),
+                title: NSLocalizedString("SEARCH", comment: ""),
+                imageName: "magnifyingglass",
+                tag: 2
+            )
         ]
     }
     
@@ -29,10 +42,10 @@ class BaseTabBarController: UITabBarController {
         viewController.navigationItem.title = title
         viewController.view.backgroundColor = .white
         viewController.navigationItem.largeTitleDisplayMode = .always
-
+        
         let navController = UINavigationController(rootViewController: viewController)
         navController.navigationBar.prefersLargeTitles = true
-
+        
         navController.tabBarItem = UITabBarItem(title: title,
                                                 image: UIImage(systemName: imageName ?? ""),
                                                 tag: tag

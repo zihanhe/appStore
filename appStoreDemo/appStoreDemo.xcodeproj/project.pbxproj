@@ -3,10 +3,12 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		595165E126180FF100856F5E /* AppsGroupCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595165E026180FF100856F5E /* AppsGroupCell.swift */; };
+		595165E42618134000856F5E /* AppsHorizontalController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 595165E32618134000856F5E /* AppsHorizontalController.swift */; };
 		595559FF260FFFF800D29874 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 59555A01260FFFF800D29874 /* Localizable.strings */; };
 		59E75826261014FF00C94A18 /* AppSearchController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E75825261014FF00C94A18 /* AppSearchController.swift */; };
 		59E7583026101DF200C94A18 /* SearchResultCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7582F26101DF200C94A18 /* SearchResultCell.swift */; };
@@ -15,6 +17,8 @@
 		59E7583A261089CB00C94A18 /* SearchResultCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E75839261089CB00C94A18 /* SearchResultCellModel.swift */; };
 		59E7583F261093E800C94A18 /* APICaller.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7583E261093E800C94A18 /* APICaller.swift */; };
 		59E7584226109B1D00C94A18 /* SearchResultResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7584126109B1D00C94A18 /* SearchResultResponse.swift */; };
+		59E7584C26180A7600C94A18 /* AppsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7584B26180A7600C94A18 /* AppsController.swift */; };
+		59E7584F26180B9E00C94A18 /* BaseListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59E7584E26180B9E00C94A18 /* BaseListController.swift */; };
 		59F5C313260ED13F002331DC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F5C312260ED13F002331DC /* AppDelegate.swift */; };
 		59F5C315260ED13F002331DC /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59F5C314260ED13F002331DC /* SceneDelegate.swift */; };
 		59F5C31C260ED140002331DC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 59F5C31B260ED140002331DC /* Assets.xcassets */; };
@@ -26,6 +30,8 @@
 /* Begin PBXFileReference section */
 		4B24BB00C8335F78747C4910 /* Pods-appStoreDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appStoreDemo.release.xcconfig"; path = "Target Support Files/Pods-appStoreDemo/Pods-appStoreDemo.release.xcconfig"; sourceTree = "<group>"; };
 		4DE72194986E9FBC089B764F /* Pods-appStoreDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-appStoreDemo.debug.xcconfig"; path = "Target Support Files/Pods-appStoreDemo/Pods-appStoreDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		595165E026180FF100856F5E /* AppsGroupCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsGroupCell.swift; sourceTree = "<group>"; };
+		595165E32618134000856F5E /* AppsHorizontalController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsHorizontalController.swift; sourceTree = "<group>"; };
 		595559FB260FFF3D00D29874 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		59555A00260FFFF800D29874 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		59555A14261002A400D29874 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -36,6 +42,8 @@
 		59E75839261089CB00C94A18 /* SearchResultCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultCellModel.swift; sourceTree = "<group>"; };
 		59E7583E261093E800C94A18 /* APICaller.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APICaller.swift; sourceTree = "<group>"; };
 		59E7584126109B1D00C94A18 /* SearchResultResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultResponse.swift; sourceTree = "<group>"; };
+		59E7584B26180A7600C94A18 /* AppsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppsController.swift; sourceTree = "<group>"; };
+		59E7584E26180B9E00C94A18 /* BaseListController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseListController.swift; sourceTree = "<group>"; };
 		59F5C30F260ED13F002331DC /* appStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = appStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		59F5C312260ED13F002331DC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		59F5C314260ED13F002331DC /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -67,7 +75,6 @@
 				4DE72194986E9FBC089B764F /* Pods-appStoreDemo.debug.xcconfig */,
 				4B24BB00C8335F78747C4910 /* Pods-appStoreDemo.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -77,6 +84,14 @@
 				E8A0D9AB61ECFBE84E873578 /* Pods_appStoreDemo.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		595165DF26180FD700856F5E /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				595165E026180FF100856F5E /* AppsGroupCell.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 		59555A072610000800D29874 /* Resources */ = {
@@ -101,6 +116,7 @@
 		59E7582D26101C5000C94A18 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				595165DF26180FD700856F5E /* Apps */,
 				59E7582F26101DF200C94A18 /* SearchResultCell.swift */,
 			);
 			path = Views;
@@ -129,6 +145,23 @@
 				59E7584126109B1D00C94A18 /* SearchResultResponse.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		59E7585126180BE600C94A18 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				59E75825261014FF00C94A18 /* AppSearchController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		59E7585226180BF900C94A18 /* Apps */ = {
+			isa = PBXGroup;
+			children = (
+				59E7584B26180A7600C94A18 /* AppsController.swift */,
+				595165E32618134000856F5E /* AppsHorizontalController.swift */,
+			);
+			path = Apps;
 			sourceTree = "<group>";
 		};
 		59F5C306260ED13F002331DC = {
@@ -188,8 +221,10 @@
 		59F5C34A260ED822002331DC /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				59E7585226180BF900C94A18 /* Apps */,
+				59E7585126180BE600C94A18 /* Search */,
 				59F5C345260ED5F5002331DC /* BaseTabBarController.swift */,
-				59E75825261014FF00C94A18 /* AppSearchController.swift */,
+				59E7584E26180B9E00C94A18 /* BaseListController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -310,15 +345,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				59F5C346260ED5F5002331DC /* BaseTabBarController.swift in Sources */,
+				59E7584C26180A7600C94A18 /* AppsController.swift in Sources */,
 				59E75826261014FF00C94A18 /* AppSearchController.swift in Sources */,
 				59E7583F261093E800C94A18 /* APICaller.swift in Sources */,
 				59F5C313260ED13F002331DC /* AppDelegate.swift in Sources */,
 				59E7584226109B1D00C94A18 /* SearchResultResponse.swift in Sources */,
+				595165E126180FF100856F5E /* AppsGroupCell.swift in Sources */,
 				59E7583026101DF200C94A18 /* SearchResultCell.swift in Sources */,
 				59E75837261080FB00C94A18 /* VerticalStackView.swift in Sources */,
 				59E75834261026E400C94A18 /* UIView+Layout.swift in Sources */,
 				59F5C315260ED13F002331DC /* SceneDelegate.swift in Sources */,
+				59E7584F26180B9E00C94A18 /* BaseListController.swift in Sources */,
 				59E7583A261089CB00C94A18 /* SearchResultCellModel.swift in Sources */,
+				595165E42618134000856F5E /* AppsHorizontalController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

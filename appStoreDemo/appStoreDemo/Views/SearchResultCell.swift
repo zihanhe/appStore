@@ -9,6 +9,7 @@ import UIKit
 import SDWebImage
 
 class SearchResultCell: UICollectionViewCell {
+    static let identifier = "SearchResultCell"
 
     // MARK: - View Elements
 
@@ -35,7 +36,6 @@ class SearchResultCell: UICollectionViewCell {
     }
     
     
-    static let identifier = "SearchResultCell"
 
     let appIconImageView: UIImageView = {
         let imgView = UIImageView()

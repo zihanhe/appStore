@@ -8,7 +8,7 @@
 import UIKit
 
 
-class AppSearchController: UICollectionViewController {
+class AppSearchController: BaseListController {
 
     
     var appResults = [ResultItem]()
@@ -26,15 +26,6 @@ class AppSearchController: UICollectionViewController {
         return label
     }()
     
-    // MARK: - Init
-
-    init(){
-        super.init(collectionViewLayout: UICollectionViewFlowLayout())
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init?(coder: NSCoder) has not been implemented")
-    }
     // MARK: LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
