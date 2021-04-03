@@ -6,3 +6,13 @@
 //
 
 import Foundation
+struct SearchResultCellModel {
+    let artworkUrl100: URL?
+    
+    let trackName: String
+    let primaryGenreName: String
+    var averageUserRating: Float?
+    
+    let screenshotUrls: [URL]
+
+}

@@ -5,3 +5,8 @@
   Created by thunder on 28/03/21.
   
 */
+"TODAY" = "Today";
+"SEARCH" = "Search";
+"APPS" = "Apps";
+
+"Search_SearchBar_Placholder" = "Please enter search term above... ";
