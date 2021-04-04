@@ -8,5 +8,6 @@
 "TODAY" = "Today";
 "SEARCH" = "Search";
 "APPS" = "Apps";
+"GET" = "GET";
 
 "Search_SearchBar_Placholder" = "Please enter search term above... ";
