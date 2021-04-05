@@ -9,6 +9,16 @@ import UIKit
 
 class AppsGroupCell: UICollectionViewCell {
     
+    var viewModel: AppsGroupCellViewModel! {
+        
+        didSet{
+            titleLabel.text = viewModel.title
+            horizontalController.rowCellModels = viewModel.cellModels
+            horizontalController.collectionView.reloadData()
+        }
+
+    }
+
     static let identifier = "AppsGroupCell"
     
     let horizontalController = AppsHorizontalController()
@@ -21,11 +31,11 @@ class AppsGroupCell: UICollectionViewCell {
         return label
     }()
     
-    //Mark: - Life cycle
+    //MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
         
-        backgroundColor = .secondarySystemBackground
+        backgroundColor = .systemBackground
         
         addSubview(titleLabel)
         titleLabel.anchor(top: topAnchor,

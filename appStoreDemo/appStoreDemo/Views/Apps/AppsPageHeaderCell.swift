@@ -18,7 +18,7 @@ class AppsPageHeaderCell: UICollectionViewCell {
     
     let imageView = UIImageView(cornerRadius: 8)
 
-    //Mark: - Life cycle
+    //MARK: - Life cycle
 
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -38,4 +38,9 @@ class AppsPageHeaderCell: UICollectionViewCell {
     }
     
     
+    override func prepareForReuse() {
+        companyLabel.text = nil
+        companyLabel.text = nil
+        imageView.image = nil
+    }
 }

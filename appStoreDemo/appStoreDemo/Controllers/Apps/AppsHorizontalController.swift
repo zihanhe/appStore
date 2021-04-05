@@ -11,11 +11,13 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
 
     let topBottomPadding: CGFloat = 12
     let lineSpacing: CGFloat = 10
+    
+    var rowCellModels: [AppsRowCellViewModel]?
 
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .secondarySystemBackground
+        collectionView.backgroundColor = .systemBackground
         collectionView.register(AppRowCell.self , forCellWithReuseIdentifier: AppRowCell.identifier)
         
         if let layout = collectionViewLayout as? UICollectionViewFlowLayout{
@@ -26,7 +28,7 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
     // MARK: - Data source and delegate
     
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return rowCellModels?.count ?? 0
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -35,6 +37,12 @@ class AppsHorizontalController: BaseListController, UICollectionViewDelegateFlow
             return UICollectionViewCell()
         }
         
+        
+        guard let model = rowCellModels?[indexPath.row] else {
+            return UICollectionViewCell()
+        }
+        
+        cell.viewModel = model
         
         return cell
     }

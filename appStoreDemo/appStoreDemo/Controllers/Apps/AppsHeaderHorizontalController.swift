@@ -13,7 +13,7 @@ class AppsHeaderHorizontalController : BaseListController, UICollectionViewDeleg
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        collectionView.backgroundColor = .brown
+        collectionView.backgroundColor = .systemBackground
         
         collectionView.register(AppsPageHeaderCell.self, forCellWithReuseIdentifier: AppsPageHeaderCell.identifier)
         

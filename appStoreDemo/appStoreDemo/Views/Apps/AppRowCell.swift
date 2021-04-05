@@ -6,11 +6,21 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AppRowCell: UICollectionViewCell {
-
+    
+    var viewModel: AppsRowCellViewModel! {
+        
+        didSet{
+            nameLabel.text = viewModel.name
+            companyLabel.text = viewModel.companyName
+            imageView.sd_setImage(with: viewModel.imageURL, completed: nil)
+        }
+    }
+    
     //MARK: - UI Elements
-
+    
     static let identifier = "AppRowCell"
     let imageView = UIImageView(cornerRadius: 8)
     
@@ -29,10 +39,10 @@ class AppRowCell: UICollectionViewCell {
     
     let getButton = UIButton(title: NSLocalizedString("GET", comment: ""))
     
-    //Mark: - Life cycle
+    //MARK: - Life cycle
     override init(frame: CGRect) {
         super.init(frame: frame)
-        backgroundColor = .secondarySystemBackground
+        backgroundColor = .systemBackground
         
         imageView.constrainWidth(constant: 64)
         imageView.constrainHeight(constant: 64)
@@ -57,6 +67,12 @@ class AppRowCell: UICollectionViewCell {
     
     required init?(coder: NSCoder) {
         fatalError("(coder: NSCoder) is missing")
+    }
+    
+    override func prepareForReuse() {
+        nameLabel.text = nil
+        companyLabel.text = nil
+        imageView.image = nil
     }
     
 }
