@@ -7,13 +7,22 @@
 
 import UIKit
 
-class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
+class AppsPageController: BaseListController, UICollectionViewDelegateFlowLayout {
+    
+    let headerID = "headerID"
     
     // MARK: - Life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView.backgroundColor = .systemBackground
-        collectionView.register(AppsGroupCell.self, forCellWithReuseIdentifier: AppsGroupCell.identifier)
+        collectionView.register(AppsGroupCell.self,
+                                forCellWithReuseIdentifier: AppsGroupCell.identifier
+        )
+        
+        collectionView.register(AppsPageHeaderView.self,
+                                forSupplementaryViewOfKind: UICollectionView.elementKindSectionHeader,
+                                withReuseIdentifier: AppsPageHeaderView.identifier
+        )
     }
 
     
@@ -47,7 +56,25 @@ class AppsController: BaseListController, UICollectionViewDelegateFlowLayout {
         return .init(top: 16, left: 0, bottom: 0, right: 0)
     }
     
+     // SupplementaryViewOfKind for Header
+    override func collectionView(_ collectionView: UICollectionView, viewForSupplementaryElementOfKind kind: String, at indexPath: IndexPath) -> UICollectionReusableView {
+        
+        guard let headerView = collectionView.dequeueReusableSupplementaryView(
+                ofKind: kind,
+                withReuseIdentifier: AppsPageHeaderView.identifier,
+              for: indexPath
+        ) as? AppsPageHeaderView, kind == UICollectionView.elementKindSectionHeader else {
+            return UICollectionReusableView()
+        }
+        
+        return headerView
+    }
     
+    // Header view height
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, referenceSizeForHeaderInSection section: Int) -> CGSize {
+        return .init(width: view.frame.width, height: 300)
+    }
+
 }
 
 

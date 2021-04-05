@@ -14,7 +14,7 @@ class BaseTabBarController: UITabBarController {
         
         viewControllers = [
             createNavController(
-                viewController: AppsController(),
+                viewController: AppsPageController(),
                 title: NSLocalizedString("APPS", comment: ""),
                 imageName: "square.stack.3d.up.fill",
                 tag: 1
